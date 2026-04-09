@@ -1,9 +1,13 @@
 services:
-simpleapps:
-container_name: ct-simpleapps
-build: /app
-ports:
-- "8181:3000"
-env_file:
-- .env
-restart: always
+  simpleapps:
+    container_name: ct-simpleapps
+    build: /app
+    ports:
+    - "8181:3000"
+    environment:
+      - DB_NAME=training
+      - DB_HOST=172.23.7.20
+      - DB_USER=peserta
+      - DB_PASS=password
+      - APP_PORT=3000
+    restart: always
