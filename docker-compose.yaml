@@ -1,7 +1,8 @@
 services:
   simpleapps:
     container_name: ct-simpleapps
-    build: /app
+    #build: /app
+    image: rezpratama26/simpleapps
     ports:
     - "8181:3000"
     environment:
