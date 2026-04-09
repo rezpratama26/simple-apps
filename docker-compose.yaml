@@ -1,7 +1,7 @@
 services:
   simpleapps:
     container_name: ct-simpleapps
-    build: /app
+    build: ./app
     ports:
     - "8181:3000"
     environment:
